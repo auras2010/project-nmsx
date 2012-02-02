@@ -1,0 +1,4 @@
+Core: 5119
+Datapack: 8612
+
+last synchronization with l2j (branchest)
