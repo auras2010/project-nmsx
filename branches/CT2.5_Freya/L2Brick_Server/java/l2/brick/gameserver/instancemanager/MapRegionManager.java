@@ -48,7 +48,6 @@ import javolution.util.FastMap;
 
 /**
  * @author Nyaran
- *
  */
 public class MapRegionManager
 {
@@ -89,7 +88,7 @@ public class MapRegionManager
 		}
 	}
 	
-	private static void load() throws Exception
+	private static void load()
 	{
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
@@ -257,8 +256,8 @@ public class MapRegionManager
 	
 	/**
 	 * Get town name by character position
-	 * @param townId
-	 * @return String
+	 * @param activeChar
+	 * @return
 	 */
 	public String getClosestTownName(L2Character activeChar)
 	{
@@ -305,8 +304,7 @@ public class MapRegionManager
 						{
 							if (player.getKarma() > 0)
 								return zone.getChaoticSpawnLoc();
-							else
-								return zone.getSpawnLoc();
+							return zone.getSpawnLoc();
 						}
 					}
 				}
@@ -328,8 +326,7 @@ public class MapRegionManager
 					{
 						if (player.getKarma() > 0)
 							return castle.getCastleZone().getChaoticSpawnLoc();
-						else
-							return castle.getCastleZone().getSpawnLoc();
+						return castle.getCastleZone().getSpawnLoc();
 					}
 				}
 				
@@ -350,8 +347,7 @@ public class MapRegionManager
 					{
 						if (player.getKarma() > 0)
 							return fort.getFortZone().getChaoticSpawnLoc();
-						else
-							return fort.getFortZone().getSpawnLoc();
+						return fort.getFortZone().getSpawnLoc();
 					}
 				}
 				
@@ -410,19 +406,19 @@ public class MapRegionManager
 			{
 				castle = CastleManager.getInstance().getCastle(player);
 				if (castle != null)
-					return castle.getCastleZone().getBanishSpawnLoc();
+					return castle.getCastleZone().getSpawnLoc();
 			}
 			else if (teleportWhere == TeleportWhereType.Fortress_banish)
 			{
 				fort = FortManager.getInstance().getFort(activeChar);
 				if (fort != null)
-					return fort.getFortZone().getBanishSpawnLoc();
+					return fort.getFortZone().getSpawnLoc();
 			}
 			else if (teleportWhere == TeleportWhereType.ClanHall_banish)
 			{
 				clanhall = ClanHallManager.getInstance().getClanHall(activeChar);
 				if (clanhall != null)
-					return clanhall.getZone().getBanishSpawnLoc();
+					return clanhall.getZone().getSpawnLoc();
 			}
 			
 			
@@ -434,15 +430,13 @@ public class MapRegionManager
 					L2RespawnZone zone = ZoneManager.getInstance().getZone(player, L2RespawnZone.class);
 					if (zone != null)
 						return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getChaoticSpawnLoc();
-					else
-						return getMapRegion(activeChar).getChaoticSpawnLoc();
+					return getMapRegion(activeChar).getChaoticSpawnLoc();
 				}
 				catch (Exception e)
 				{
 					if (player.isFlyingMounted()) // prevent flying players to teleport outside of gracia
 						return _regions.get("union_base_of_kserth").getChaoticSpawnLoc();
-					else
-						return _regions.get("talking_island_town").getChaoticSpawnLoc();
+					return _regions.get("talking_island_town").getChaoticSpawnLoc();
 				}
 			}
 			
@@ -454,7 +448,7 @@ public class MapRegionManager
 				{
 					// Check if player's clan is participating
 					if ((castle.getSiege().checkIsDefender(player.getClan()) || castle.getSiege().checkIsAttacker(player.getClan())) && SevenSigns.getInstance().getSealOwner(SevenSigns.SEAL_STRIFE) == SevenSigns.CABAL_DAWN)
-						return castle.getCastleZone().getOtherSpawnLoc();
+						return castle.getCastleZone().getSpawnLoc();
 				}
 			}
 			
@@ -477,8 +471,7 @@ public class MapRegionManager
 			L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
 			if (zone != null)
 				return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getSpawnLoc();
-			else
-				return getMapRegion(activeChar).getSpawnLoc();
+			return getMapRegion(activeChar).getSpawnLoc();
 		}
 		catch (Exception e)
 		{
@@ -511,4 +504,5 @@ public class MapRegionManager
 	{
 		protected static final MapRegionManager _instance = new MapRegionManager();
 	}
+	
 }
