@@ -48,6 +48,7 @@ import javolution.util.FastMap;
 
 /**
  * @author Nyaran
+ *
  */
 public class MapRegionManager
 {
@@ -88,7 +89,7 @@ public class MapRegionManager
 		}
 	}
 	
-	private static void load()
+	private static void load() throws Exception
 	{
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setValidating(false);
@@ -256,8 +257,8 @@ public class MapRegionManager
 	
 	/**
 	 * Get town name by character position
-	 * @param activeChar
-	 * @return
+	 * @param townId
+	 * @return String
 	 */
 	public String getClosestTownName(L2Character activeChar)
 	{
@@ -304,7 +305,8 @@ public class MapRegionManager
 						{
 							if (player.getKarma() > 0)
 								return zone.getChaoticSpawnLoc();
-							return zone.getSpawnLoc();
+							else
+								return zone.getSpawnLoc();
 						}
 					}
 				}
@@ -326,7 +328,8 @@ public class MapRegionManager
 					{
 						if (player.getKarma() > 0)
 							return castle.getCastleZone().getChaoticSpawnLoc();
-						return castle.getCastleZone().getSpawnLoc();
+						else
+							return castle.getCastleZone().getSpawnLoc();
 					}
 				}
 				
@@ -347,7 +350,8 @@ public class MapRegionManager
 					{
 						if (player.getKarma() > 0)
 							return fort.getFortZone().getChaoticSpawnLoc();
-						return fort.getFortZone().getSpawnLoc();
+						else
+							return fort.getFortZone().getSpawnLoc();
 					}
 				}
 				
@@ -430,13 +434,15 @@ public class MapRegionManager
 					L2RespawnZone zone = ZoneManager.getInstance().getZone(player, L2RespawnZone.class);
 					if (zone != null)
 						return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getChaoticSpawnLoc();
-					return getMapRegion(activeChar).getChaoticSpawnLoc();
+					else
+						return getMapRegion(activeChar).getChaoticSpawnLoc();
 				}
 				catch (Exception e)
 				{
 					if (player.isFlyingMounted()) // prevent flying players to teleport outside of gracia
 						return _regions.get("union_base_of_kserth").getChaoticSpawnLoc();
-					return _regions.get("talking_island_town").getChaoticSpawnLoc();
+					else
+						return _regions.get("talking_island_town").getChaoticSpawnLoc();
 				}
 			}
 			
@@ -471,7 +477,8 @@ public class MapRegionManager
 			L2RespawnZone zone = ZoneManager.getInstance().getZone(activeChar, L2RespawnZone.class);
 			if (zone != null)
 				return getRestartRegion(activeChar, zone.getRespawnPoint((L2PcInstance) activeChar)).getSpawnLoc();
-			return getMapRegion(activeChar).getSpawnLoc();
+			else
+				return getMapRegion(activeChar).getSpawnLoc();
 		}
 		catch (Exception e)
 		{
@@ -504,5 +511,4 @@ public class MapRegionManager
 	{
 		protected static final MapRegionManager _instance = new MapRegionManager();
 	}
-	
 }
