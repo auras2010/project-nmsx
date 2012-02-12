@@ -400,11 +400,6 @@ public class EnterWorld extends L2GameClientPacket
 		
 		sendPacket(new FriendList(activeChar));
 		
-		activeChar.sendMessage("Server use L2Brick files " +
-				"and developed by the L2Brick Team, " +
-				"you can find our info about project on www.l2brick.funsite.cz");
-		activeChar.sendMessage("L2Brick Team: RobikBobik, St3et, mjaniko, FFs");
-		
 		SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.FRIEND_S1_HAS_LOGGED_IN);
 		sm.addString(activeChar.getName());
 		for (int id : activeChar.getFriendList())
