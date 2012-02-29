@@ -1,0 +1,407 @@
+<?xml version='1.0' encoding='utf-8'?>
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
+	<!-- Greater Haste Potion -->
+	<item id="1">
+		<ingredient id="6392" count="5"/>
+		<production id="1374" count="1"/>
+	</item>
+
+	<!-- Greater Swift Attack Potion -->
+	<item id="2">
+		<ingredient id="6392" count="10"/>
+		<production id="1375" count="1"/>
+	</item>
+
+	<!-- Greater Magic Haste Potion -->
+	<item id="3">
+		<ingredient id="6392" count="10"/>
+		<production id="6036" count="1"/>
+	</item>
+
+	<!-- Quick Healing Potion -->
+	<item id="4">
+		<ingredient id="6392" count="17"/>
+		<production id="1540" count="1"/>
+	</item>
+
+	<!-- Blessed Scroll of Escape -->
+	<item id="5">
+		<ingredient id="6392" count="250"/>
+		<production id="1538" count="1"/>
+	</item>
+
+	<!-- Blessed Scroll of Resurrection -->
+	<item id="6">
+		<ingredient id="6392" count="667"/>
+		<production id="6387" count="1"/>
+	</item>
+
+	<!-- Scroll: Enchant Armor (D Grade) 956-->
+	<item id="7">
+		<ingredient id="6392" count="25"/>
+		<production id="956" count="1"/>
+	</item>
+
+	<!-- Scroll: Enchant Weapon (D Grade) 955-->
+	<item id="8">
+		<ingredient id="6392" count="83"/>
+		<production id="955" count="1"/>
+	</item>
+
+	<!-- Scroll: Enchant Armor (C Grade) 952-->
+	<item id="9">
+		<ingredient id="6392" count="67"/>
+		<production id="952" count="1"/>
+	</item>
+
+	<!-- Scroll: Enchant Weapon (C Grade) 951-->
+	<item id="10">
+		<ingredient id="6392" count="183"/>
+		<production id="951" count="1"/>
+	</item>
+
+	<!-- Scroll: Enchant Armor (B Grade) 948-->
+	<item id="11">
+		<ingredient id="6392" count="267"/>
+		<production id="948" count="1"/>
+	</item>
+
+	<!-- Scroll: Enchant Weapon (B Grade)	 947-->
+	<item id="12">
+		<ingredient id="6392" count="833"/>
+		<production id="947" count="1"/>
+	</item>
+
+	<!-- Scroll: Enchant Armor (A Grade) 730-->
+	<item id="13">
+		<ingredient id="6392" count="833"/>
+		<production id="730" count="1"/>
+	</item>
+
+	<!-- Scroll: Enchant Weapon (A Grade) 729-->
+	<item id="14">
+		<ingredient id="6392" count="3000"/>
+		<production id="729" count="1"/>
+	</item>
+
+	<!-- Red Party Mask 6394(armor)-->
+	<item id="15">
+		<ingredient id="6392" count="833"/>
+		<production id="6394" count="1"/>
+	</item>
+
+	<!-- Red Soul Crystal - Stage 11 5577-->
+	<item id="16">
+		<ingredient id="6392" count="5000"/>
+		<production id="5577" count="1"/>
+	</item>
+
+	<!-- Green Soul Crystal - Stage 11 5578-->
+	<item id="17">
+		<ingredient id="6392" count="5000"/>
+		<production id="5578" count="1"/>
+	</item>
+
+	<!-- Blue Soul Crystal - Stage 11 5579-->
+	<item id="18">
+		<ingredient id="6392" count="5000"/>
+		<production id="5579" count="1"/>
+	</item>
+
+	<!-- Red Soul Crystal - Stage 12 5580-->
+	<item id="19">
+		<ingredient id="6392" count="10000"/>
+		<production id="5580" count="1"/>
+	</item>
+
+	<!-- Green Soul Crystal - Stage 12 5581-->
+	<item id="20">
+		<ingredient id="6392" count="10000"/>
+		<production id="5581" count="1"/>
+	</item>
+
+	<!-- Blue Soul Crystal - Stage 12 5582-->
+	<item id="21">
+		<ingredient id="6392" count="10000"/>
+		<production id="5582" count="1"/>
+	</item>
+
+	<!-- Sealed Majestic Necklace 6326(armor)-->
+	<item id="22">
+		<ingredient id="6392" count="6240"/>
+		<production id="6326" count="1"/>
+	</item>
+
+	<!-- Sealed Majestic Earring 6327(armor)-->
+	<item id="23">
+		<ingredient id="6392" count="4680"/>
+		<production id="6327" count="1"/>
+	</item>
+
+	<!-- Sealed Majestic Ring 6328(armor)-->
+	<item id="24">
+		<ingredient id="6392" count="3120"/>
+		<production id="6328" count="1"/>
+	</item>
+
+	<!-- All here are accesories -->
+	<item id="25">
+		<ingredient id="6392" count="500"/>
+		<production id="6843" count="1"/>
+	</item>
+
+	<!-- All here are accesories -->
+	<item id="26">
+		<ingredient id="6392" count="590"/>
+		<production id="7680" count="1"/>
+	</item>
+
+	<!-- All here are accesories -->
+	<item id="27">
+		<ingredient id="6392" count="512"/>
+		<production id="8189" count="1"/>
+	</item>
+
+	<!-- All here are accesories -->
+	<item id="28">
+		<ingredient id="6392" count="534"/>
+		<production id="8188" count="1"/>
+	</item>
+
+	<!-- All here are accesories -->
+	<item id="29">
+		<ingredient id="6392" count="721"/>
+		<production id="8559" count="1"/>
+	</item>
+
+	<!-- All here are accesories -->
+	<item id="30">
+		<ingredient id="6392" count="721"/>
+		<production id="8560" count="1"/>
+	</item>
+
+	<!-- All here are accesories -->
+	<item id="31">
+		<ingredient id="6392" count="721"/>
+		<production id="8561" count="1"/>
+	</item>
+
+	<!---->
+	<item id="32">
+		<ingredient id="6393" count="1"/>
+		<production id="6392" count="10"/>
+	</item>
+
+	<!---->
+	<item id="33">
+		<ingredient id="6392" count="590"/>
+		<production id="7843" count="1"/>
+	</item>
+
+	<!---->
+	<item id="34">
+		<ingredient id="6392" count="590"/>
+		<production id="7844" count="1"/>
+	</item>
+
+	<!---->
+	<item id="35">
+		<ingredient id="6392" count="590"/>
+		<production id="7845" count="1"/>
+	</item>
+
+	<!---->
+	<item id="36">
+		<ingredient id="6392" count="590"/>
+		<production id="7847" count="1"/>
+	</item>
+
+	<!---->
+	<item id="37">
+		<ingredient id="6392" count="590"/>
+		<production id="7846" count="1"/>
+	</item>
+
+	<!---->
+	<item id="38">
+		<ingredient id="6392" count="590"/>
+		<production id="7848" count="1"/>
+	</item>
+
+	<!---->
+	<item id="39">
+		<ingredient id="6392" count="590"/>
+		<production id="7849" count="1"/>
+	</item>
+
+	<!---->
+	<item id="40">
+		<ingredient id="6392" count="590"/>
+		<production id="8558" count="1"/>
+	</item>
+
+	<!---->
+	<item id="41">
+		<ingredient id="6392" count="590"/>
+		<production id="8910" count="1"/>
+	</item>
+
+	<!---->
+	<item id="42">
+		<ingredient id="6392" count="590"/>
+		<production id="8911" count="1"/>
+	</item>
+
+	<!---->
+	<item id="43">
+		<ingredient id="6392" count="590"/>
+		<production id="8919" count="1"/>
+	</item>
+
+	<!---->
+	<item id="44">
+		<ingredient id="6392" count="590"/>
+		<production id="9208" count="1"/>
+	</item>
+
+	<!---->
+	<item id="45">
+		<ingredient id="6392" count="590"/>
+		<production id="9409" count="1"/>
+	</item>
+
+	<!---->
+	<item id="46">
+		<ingredient id="6392" count="590"/>
+		<production id="10175" count="1"/>
+	</item>
+
+	<!---->
+	<item id="47">
+		<ingredient id="6392" count="590"/>
+		<production id="10176" count="1"/>
+	</item>
+
+	<!---->
+	<item id="48">
+		<ingredient id="6392" count="590"/>
+		<production id="10250" count="1"/>
+	</item>
+
+	<!---->
+	<item id="49">
+		<ingredient id="6392" count="590"/>
+		<production id="8184" count="1"/>
+	</item>
+
+	<!---->
+	<item id="50">
+		<ingredient id="6392" count="590"/>
+		<production id="8185" count="1"/>
+	</item>
+
+	<!---->
+	<item id="51">
+		<ingredient id="6392" count="590"/>
+		<production id="8562" count="1"/>
+	</item>
+
+	<!---->
+	<item id="52">
+		<ingredient id="6392" count="590"/>
+		<production id="8563" count="1"/>
+	</item>
+
+	<!---->
+	<item id="53">
+		<ingredient id="6392" count="590"/>
+		<production id="8922" count="1"/>
+	</item>
+
+	<!---->
+	<item id="54">
+		<ingredient id="6392" count="590"/>
+		<production id="8565" count="1"/>
+	</item>
+
+	<!---->
+	<item id="55">
+		<ingredient id="6392" count="590"/>
+		<production id="8187" count="1"/>
+	</item>
+
+	<!---->
+	<item id="56">
+		<ingredient id="6392" count="590"/>
+		<production id="8186" count="1"/>
+	</item>
+
+	<!---->
+	<item id="57">
+		<ingredient id="6392" count="590"/>
+		<production id="8912" count="1"/>
+	</item>
+
+	<!---->
+	<item id="58">
+		<ingredient id="6392" count="590"/>
+		<production id="8552" count="1"/>
+	</item>
+
+	<!---->
+	<item id="59">
+		<ingredient id="6392" count="590"/>
+		<production id="8921" count="1"/>
+	</item>
+
+	<!---->
+	<item id="60">
+		<ingredient id="6392" count="590"/>
+		<production id="8920" count="1"/>
+	</item>
+
+	<item id="61">
+		<ingredient id="6392" count="590" />
+		<production id="7680" count="1" />
+	</item>
+
+	<item id="62">
+		<ingredient id="6392" count="610" />
+		<production id="4202" count="1" />
+	</item>
+
+	<item id="63">
+		<ingredient id="6392" count="650" />
+		<production id="5133" count="1" />
+	</item>
+
+	<item id="64">
+		<ingredient id="6392" count="690" />
+		<production id="5817" count="1" />
+	</item>
+
+	<item id="65">
+		<ingredient id="6392" count="710" />
+		<production id="7058" count="1" />
+	</item>
+
+	<item id="66">
+		<ingredient id="6392" count="512" />
+		<production id="8189" count="1" />
+	</item>
+
+	<item id="67">
+		<ingredient id="6392" count="534" />
+		<production id="8188" count="1" />
+	</item>
+
+	<item id="68">
+		<ingredient id="6392" count="721" />
+		<production id="8559" count="1" />
+	</item>
+
+	<item id="69">
+		<ingredient id="6392" count="550" />
+		<production id="6844" count="1" />
+	</item>
+</list>

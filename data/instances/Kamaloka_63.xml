@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="Kamaloka_63" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance.xsd" >
+  <activityTime val="30"/>
+  <emptyDestroyTime val="5"/>
+  <spawnPoint spawnX="85966" spawnY="-142103" spawnZ="-1343"/>
+  <spawnlist>
+    <spawn npcId="18571" x="-56415" y="-212939" z="-8068" heading="55000" respawn="0"/>
+  </spawnlist>
+</instance>

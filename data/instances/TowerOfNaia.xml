@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="TowerOfNaia">
+  <activityTime val="180"/>
+  <timeDelay val="24"/>
+  <allowSummon val="true"/>
+  <returnteleport x="13925" y="245144" z="-2016"/>
+  <doorlist>
+   <door doorId="18250002" open="true"/>
+   <door doorId="18250003" open="true"/>
+   <door doorId="18250004" open="false"/>
+   <door doorId="18250005" open="false"/>
+   <door doorId="18250006" open="false"/>
+   <door doorId="18250007" open="false"/>
+   <door doorId="18250008" open="false"/>
+   <door doorId="18250009" open="false"/>
+   <door doorId="18250010" open="false"/>
+   <door doorId="18250011" open="false"/>
+   <door doorId="18250101" open="false"/>
+   <door doorId="18250013" open="false"/>
+   <door doorId="18250014" open="false"/>
+   <door doorId="18250015" open="false"/>
+   <door doorId="18250102" open="false"/>
+   <door doorId="18250017" open="false"/>
+   <door doorId="18250018" open="false"/>
+   <door doorId="18250019" open="false"/>
+   <door doorId="18250103" open="false"/>
+   <door doorId="18250021" open="false"/>
+   <door doorId="18250022" open="false"/>
+   <door doorId="18250023" open="false"/>
+   <door doorId="18250024" open="false"/>
+   <door doorId="18250025" open="false"/>
+  </doorlist>
+  <spawnlist>
+      <spawn npcId="25603" x="21926" y="243921" z="11086" heading="6711" respawn="0" amount="1" /> 
+	  <spawn npcId="25605" x="-48719" y="248849" z="-9120" heading="6711" respawn="0" amount="1" /> 
+	  <spawn npcId="25605" x="-48568" y="249715" z="-9120" heading="6711" respawn="0" amount="1" /> 
+	  <spawn npcId="25605" x="-48265" y="249168" z="-9125" heading="6711" respawn="0" amount="1" /> 
+	  <spawn npcId="25605" x="-48640" y="248761" z="-9127" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-48738" y="248628" z="-9127" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-48265" y="249168" z="-9127" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-48786" y="248972" z="-9127" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-48652" y="249329" z="-9127" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-48982" y="249100" z="-9129" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-49042" y="249232" z="-9126" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-49207" y="249487" z="-9127" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-49348" y="249367" z="-9127" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-49299" y="249016" z="-9127" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-49208" y="248831" z="-9127" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-49550" y="249254" z="-9126" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-49688" y="249502" z="-9129" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25605" x="-49697" y="248915" z="-9127" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-52114" y="246572" z="-9994" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-52113" y="246376" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-52104" y="246148" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-52108" y="245842" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-52104" y="245603" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51780" y="245571" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51759" y="245796" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51770" y="246169" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51766" y="246514" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51496" y="246515" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51490" y="246187" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51494" y="245816" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51490" y="245525" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51137" y="245541" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51141" y="245809" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51146" y="246119" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25606" x="-51149" y="246420" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-49810" y="243876" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-49729" y="243760" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-49797" y="243475" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-49769" y="243134" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-49626" y="243029" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-49527" y="243367" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-49341" y="243616" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-49165" y="243442" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-49184" y="243803" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-49261" y="243067" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48983" y="243292" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48789" y="243618" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48859" y="243949" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48583" y="243863" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48620" y="243371" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48797" y="243014" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48607" y="242868" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48270" y="243279" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48128" y="242995" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48084" y="243451" z="-9995" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25607" x="-48243" y="243757" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46677" y="245664" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46678" y="245930" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46676" y="246254" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46674" y="246563" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46330" y="245607" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46339" y="245868" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46330" y="245607" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46348" y="246566" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46052" y="245607" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46059" y="246008" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46051" y="246349" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-46050" y="246630" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-45719" y="245610" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-45722" y="245845" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-45728" y="246102" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25608" x="-45726" y="246473" z="-9991" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25610" x="-48912" y="248043" z="-11717" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25612" x="-48888" y="248068" z="-9992" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25611" x="-49003" y="243999" z="-10851" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25609" x="-45448" y="247426" z="-13953" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51159" y="246610" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51153" y="246265" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51156" y="245953" z="-10856" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51165" y="245654" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51490" y="246603" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51771" y="246582" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-52101" y="246574" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-52107" y="246325" z="-10856" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51493" y="246383" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51768" y="246289" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51494" y="246113" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51165" y="245654" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51492" y="245824" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51774" y="245996" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-52108" y="246050" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-52108" y="245690" z="-10856" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51772" y="245740" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51489" y="245545" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="25613" x="-51774" y="245557" z="-10853" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-45837" y="245675" z="-11714" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46354" y="245587" z="-11712" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46103" y="245679" z="-11712" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46369" y="245873" z="-11712" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-45834" y="245997" z="-11714" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46104" y="246073" z="-11713" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-45829" y="246259" z="-11714" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-45884" y="246632" z="-11714" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46109" y="246380" z="-11712" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46117" y="246633" z="-11712" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46367" y="246209" z="-11712" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46369" y="246594" z="-11714" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46701" y="245718" z="-11712" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46696" y="246012" z="-11712" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46717" y="246330" z="-11712" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22412" x="-46702" y="246590" z="-11715" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51147" y="246620" z="-12578" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51149" y="246290" z="-12576" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51152" y="245972" z="-12578" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51144" y="245654" z="-12578" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51537" y="246632" z="-12575" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51500" y="246427" z="-12575" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51496" y="246133" z="-12575" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51491" y="245790" z="-12576" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51469" y="245581" z="-12579" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51776" y="246645" z="-12575" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51770" y="246355" z="-12575" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51766" y="246039" z="-12578" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51765" y="245774" z="-12575" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-51734" y="245614" z="-12575" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-52103" y="246647" z="-12578" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-52102" y="246340" z="-12575" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-52110" y="246002" z="-12575" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22413" x="-52107" y="245685" z="-12575" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48717" y="244121" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48419" y="244121" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48167" y="244120" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-47932" y="244123" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48750" y="243781" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48574" y="243782" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48320" y="243786" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48123" y="243795" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-47915" y="243792" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-47668" y="243786" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-47688" y="243505" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-47986" y="243508" z="-13382" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48319" y="243508" z="-13381" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48656" y="243511" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48690" y="243195" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48334" y="243180" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-48028" y="243179" z="-13379" heading="6711" respawn="0" amount="1" />
+	  <spawn npcId="22411" x="-47694" y="243181" z="-13379" heading="6711" respawn="0" amount="1" />
+  </spawnlist>
+</instance>
