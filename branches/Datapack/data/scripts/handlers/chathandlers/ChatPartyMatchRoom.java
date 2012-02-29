@@ -1,0 +1,67 @@
+/*
+ * This program is free software: you can redistribute it and/or modify it under
+ * the terms of the GNU General Public License as published by the Free Software
+ * Foundation, either version 3 of the License, or (at your option) any later
+ * version.
+ * 
+ * This program is distributed in the hope that it will be useful, but WITHOUT
+ * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS
+ * FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
+ * details.
+ * 
+ * You should have received a copy of the GNU General Public License along with
+ * this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package handlers.chathandlers;
+
+import l2.universe.gameserver.handler.IChatHandler;
+import l2.universe.gameserver.model.PartyMatchRoom;
+import l2.universe.gameserver.model.PartyMatchRoomList;
+import l2.universe.gameserver.model.actor.instance.L2PcInstance;
+import l2.universe.gameserver.network.serverpackets.CreatureSay;
+
+/**
+ * A chat handler
+ *
+ * @author  Gnacik
+ */
+public class ChatPartyMatchRoom implements IChatHandler
+{
+	private static final int[] COMMAND_IDS =
+	{
+		14
+	};
+	
+	/**
+	 * Handle chat type 'partymatchroom'
+	 */
+	public void handleChat(int type, L2PcInstance activeChar, String target, String text)
+	{
+		if (activeChar.isInPartyMatchRoom())
+		{
+			final PartyMatchRoom _room = PartyMatchRoomList.getInstance().getPlayerRoom(activeChar);
+			if(_room != null)
+			{
+				final CreatureSay cs = new CreatureSay(activeChar.getObjectId(), type, activeChar.getName(), text);
+				for(L2PcInstance _member : _room.getPartyMembers())
+				{
+					if (_member != null)
+						_member.sendPacket(cs);
+				}
+			}
+		}
+	}
+	
+	/**
+	 * Returns the chat types registered to this handler
+	 */
+	public int[] getChatTypeList()
+	{
+		return COMMAND_IDS;
+	}
+	
+	public static void main(String[] args)
+	{
+		new ChatPartyMatchRoom();
+	}
+}

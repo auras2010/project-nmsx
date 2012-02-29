@@ -1,0 +1,2239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="2400" levels="1" name="Red Coral Treasure Chest Key">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="target" val="TARGET_NONE" />
+		<set name="skillType" val="NOTDONE" />
+		<set name="reuseDelay" val="3000" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="hitTime" val="500" />
+	</skill>
+	<skill id="2401" levels="1" name="Lesser Battlefield Mana Potion">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="360" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="MANAHEAL" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player SiegeZone="126" />
+				<player level="52" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2402" levels="1" name="Lesser Battlefield CP Potion">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="1000" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<and>
+				<player SiegeZone="126" />
+				<player level="52" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2403" levels="1" name="Spring CP Potion">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="1000" />
+		<set name="reuseDelay" val="600000" />
+		<set name="skillType" val="COMBATPOINTHEAL" />
+		<set name="target" val="TARGET_SELF" />
+	</skill>
+	<skill id="2404" levels="1" name="Might">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases P. Atk. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="20" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="pa_up">
+				<mul order="0x30" stat="pAtk" val="1.12" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2405" levels="1" name="Shield">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases P. Def. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="25" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="pd_up">
+				<mul order="0x30" stat="pDef" val="1.12" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2406" levels="1" name="Wind Walk">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases Speed. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="30" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="speed_up">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2407" levels="1" name="Focus">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases the success rate of critical attacks. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="critical_prob_up">
+				<basemul order="0x30" stat="rCrit" val="0.25" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2408" levels="1" name="Death Whisper">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases critical attack power. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="48" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="critical_dmg_up">
+				<mul order="0x30" stat="cAtk" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2409" levels="1" name="Guidance">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases Accuracy. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="48" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="hit_up">
+				<add order="0x40" stat="accCombat" val="3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2410" levels="1" name="Bless Shield">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases Shield Defense Rate. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="48" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="shield_prob_up">
+				<mul order="0x30" stat="rShld" val="1.1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2411" levels="1" name="Blessed Body">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases maximum HP. Effect 3.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="max_hp_up">
+				<mul order="0x30" stat="maxHp" val="1.2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2412" levels="1" name="Haste">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases Attack Speed. Effect 1.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="attack_time_down">
+				<mul order="0x30" stat="pAtkSpd" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2413" levels="1" name="Vampiric Rage">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily bestows the ability to recover HP with some damage redirected to an enemy. It does not include damage from skill or ranged attacks. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="vampiric_attack">
+				<add order="0x40" stat="absorbDam" val="7" /> <!-- absorb 7% HP from damage inflicted on enemies -->
+			</effect>
+		</for>
+	</skill>
+	<skill id="2414" levels="1" name="Berserker Spirit">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily decreases P. Def./magic resistance/evasion and increases P. Atk/M Atk/attack speed/cast speed/speed. Effect 1.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="35" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="berserker">
+				<mul order="0x30" stat="mAtk" val="1.1" />
+				<mul order="0x30" stat="pAtk" val="1.05" />
+				<mul order="0x30" stat="mDef" val="0.9" />
+				<mul order="0x30" stat="pDef" val="0.95" />
+				<mul order="0x30" stat="mAtkSpd" val="1.05" />
+				<mul order="0x30" stat="pAtkSpd" val="1.05" />
+				<add order="0x40" stat="runSpd" val="5" />
+				<sub order="0x40" stat="rEvas" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2415" levels="1" name="Magic Barrier">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases magic resistance. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="md_up">
+				<mul order="0x30" stat="mDef" val="1.23" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2416" levels="1" name="Blessed Soul">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases maximum MP. Effect 3.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="52" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="max_mp_up">
+				<mul order="0x30" stat="maxMp" val="1.2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2417" levels="1" name="Empower">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases magic power. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="44" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="ma_up">
+				<mul order="0x30" stat="mAtk" val="1.65" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2418" levels="1" name="Acumen">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily increases cast speed. Effect 2.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="35" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="2" stackType="casting_time_down">
+				<mul order="0x30" stat="mAtkSpd" val="1.23" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2419" levels="1" name="Clarity">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily decreases skill consumption MP of target. Effect 1.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="magicLvl" val="58" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="cheap_magic">
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2420" levels="1" name="White Seed of Evil Lump">
+		<!--
+			Last Modify: 03.03.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<set name="create_item_count" val="2" />
+		<set name="create_item_id" val="9597" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2421" levels="1" name="Black Seed of Evil Lump">
+		<!--
+			Last Modify: 03.03.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<set name="create_item_count" val="2" />
+		<set name="create_item_id" val="9598" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2422" levels="1" name="1st Place Treasure Sack">
+		<!--
+			Last Modify: 03.03.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<table name="#extractableItems">
+			6373,1,1.19;6374,1,1.84;6375,1,4.47;6376,1,4.47;6377,1,4.25;6378,1,3.01;6379,1,0.19;6380,1,4.47;6381,1,4.47;6382,1,3.01;6383,1,0.19;6384,1,4.47;6385,1,4.47;6386,1,3.01;9570,1,3.16;9571,1,3.16;9572,1,3.16;5908,1,15.67;5911,1,15.67;5914,1,15.67
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+ 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2423" levels="1" name="2nd Place Treasure Sack">
+		<!--
+			Last Modify: 03.03.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<table name="#extractableItems">
+			9625,1,2.20;9626,1,1.42;9627,1,0.67;9546,1,15.30;9547,1,15.30;9548,1,15.30;9549,1,15.30;9550,1,15.30;9551,1,15.30;959,1,0.28;960,1,3.73
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+ 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2424" levels="1" name="3rd Place Treasure Sack">
+		<!--
+			Last Modify: 03.03.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<table name="#extractableItems">
+			729,1,0.51;730,1,3.86;947,1,1.85;948,1,11.57;8736,1,32.15;8738,1,23.15;8741,1,12.86;8742,1,11.57;3936,1,2.48
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+ 		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+ 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2425" levels="1" name="4th Place Treasure Sack">
+		<!--
+			Last Modify: 03.03.2011
+			Confirmed: CT2.5	
+			Confirmed:			
+			Description: 
+		-->
+		<table name="#extractableItems">
+			951,1,3.01;952,1,21.30;955,1,6.41;956,1,52.72;1538,1,2.56;9909,1,7.00;10139,1,7.00
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+ 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2426" levels="1" name="5th Place Treasure sack">
+		<!--
+			Last Modify: 03.03.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<table name="#extractableItems">
+			10178,5,10179,5,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+ 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2427" levels="1" name="6th Place Treasure Sack">
+		<!--
+			Last Modify: 03.03.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<table name="#extractableItems">
+			10260,3,9.00;10261,3,9.00;10262,3,9.00;10263,3,9.00;10264,3,9.00;10265,3,9.00;10266,3,9.00;10267,3,9.00;10268,3,9.00;10269,3,9.00;10270,3,10.00
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2428" levels="1" name="Scroll of Transformation - Rabbit">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Transform into a cute bunny.
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="transformId" val="105" />
+		<cond msgId="1509">
+			<player olympiad="false" />
+		</cond>
+		<for>
+			<effect name="Transformation" time="600" val="0" stackOrder="1" stackType="transform" /> <!-- Transformation lasts 10 minutes -->
+		</for>
+	</skill>
+	<skill id="2429" levels="1" name="Haste Juice">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Increases Atk. Spd. by 33% for 60 minutes.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="attack_time_down">
+				<mul order="0x30" stat="pAtkSpd" val="1.33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2430" levels="1" name="Accuracy Juice">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Increases accuracy by 4 for 60 minutes.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="hit_up">
+				<add order="0x40" stat="accCombat" val="4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2431" levels="1" name="Critical Power Juice">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed:
+			Comments: 
+			Description: Increases Critical attack power by 35% for 60 minutes.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="critical_dmg_up">
+				<mul order="0x30" stat="cAtk" val="1.35" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2432" levels="1" name="Critical Attack Juice">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Increases Critical attack rate by 30% for 60 minutes.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="critical_prob_up">
+				<basemul order="0x30" stat="rCrit" val="0.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2433" levels="1" name="Casting Speed Juice">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Increases Casting Spd. by 30% for 60 minutes.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="casting_time_down">
+				<mul order="0x30" stat="mAtkSpd" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2434" levels="1" name="Evasion Juice">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Increases evasion by 4 for 60 minutes.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="avoid_up">
+				<add order="0x40" stat="rEvas" val="4" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2435" levels="1" name="Magic Power Juice">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Increases M. Atk. by 75% for 60 minutes.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="ma_up">
+				<mul order="0x30" stat="mAtk" val="1.75" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2436" levels="1" name="Power Juice">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Increases P. Atk. by 15% for 60 minutes.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="pa_up">
+				<mul order="0x30" stat="pAtk" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2437" levels="1" name="Speed Juice">
+		<!--
+			Last Modify: 17.02.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: Increases moving speed by 60 for 33 minutes.
+		-->
+		<set name="buffDuration" val="3600000" />
+		<set name="isPotion" val="true" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="3" stackType="speed_up">
+				<add order="0x40" stat="runSpd" val="33" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2438" levels="1" name="Defense Juice">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Increases P. Def. by 15% for 60 minutes.
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="3600000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="4" stackType="pd_up">
+				<mul order="0x30" stat="pDef" val="1.15" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2439" levels="1" name="MP Consumption Juice">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: For 60 minutes, it decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%.
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isPotion" val="true" />
+		<set name="buffDuration" val="3600000" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+		<for>
+			<effect name="Buff" time="3600" val="0" stackOrder="1" stackType="cheap_magic">
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="2440" levels="1" name="Ancient Tome of the Demon">
+		<!--
+			Last Modify: 03.03.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<table name="#extractableItems">
+			9600,1,40;9601,2,50;9602,1,10
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+ 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2441" levels="1" name="Protection of Rune">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="755" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="755" />
+				</not>
+				<player class_id_restriction="88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 131, 132, 133, 134, 136 " />
+				<player level="82" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2442" levels="1" name="Protection of Elemental">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="756" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="756" />
+				</not>
+				<player class_id_restriction="88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 131, 132, 133, 134, 136 " />
+				<player level="82" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2443" levels="1" name="Protection of Alignment">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="757" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="757" />
+				</not>
+				<player class_id_restriction="88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 131, 132, 133, 134, 136 " />
+				<player level="82" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2444" levels="1" name="Fighter's Will">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="758" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="758" />
+				</not>
+				<player class_id_restriction="88, 89, 90, 91, 92, 93, 99, 100, 101, 102, 106, 107, 108, 109, 113, 114, 117, 118, 131, 132, 133, 134 " />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2445" levels="1" name="Archer's Will">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="759" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="759" />
+				</not>
+				<player class_id_restriction="88, 89, 90, 91, 92, 93, 99, 100, 101, 102, 106, 107, 108, 109, 113, 114, 117, 118, 131, 132, 133, 134 " />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2446" levels="1" name="Anti-magic Armor">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="760" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="760" />
+				</not>
+				<player class_id_restriction="90, 91, 99, 106" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2447" levels="1" name="Seed of Revenge">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="761,762" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="761" />
+				</not>
+				<player class_id_restriction="91" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2448" levels="1" name="Hell Scream">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="763" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="763" />
+				</not>
+				<player class_id_restriction="91" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2449" levels="1" name="Song of Wind Storm">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="764" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="764" />
+				</not>
+				<player class_id_restriction="100" />
+				<player level="76" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2450" levels="1" name="Dance of Blade Storm">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="765" />
+		<set name="magicLvl" val="76" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="765" />
+				</not>
+				<player class_id_restriction="107" />
+				<player level="76" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2451" levels="1" name="Sixth Sense">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="766" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="766" />
+				</not>
+				<player class_id_restriction="90, 91, 93, 99, 100, 101, 106, 107, 108, 132, 133, 134" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2452" levels="1" name="Expose Weak Point">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="767" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="767" />
+				</not>
+				<player class_id_restriction="88, 89, 93, 101, 108, 113, 114, 117, 118, 131, 132, 133" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2453" levels="1" name="Exciting Adventure">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="768" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="768" />
+				</not>
+				<player class_id_restriction="93" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2454" levels="1" name="Wind Riding">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="769" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="769" />
+				</not>
+				<player class_id_restriction="101" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2455" levels="1" name="Ghost Walking">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="770" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="770" />
+				</not>
+				<player class_id_restriction="108" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2456" levels="1" name="Flame Hawk">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="771" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="771" />
+				</not>
+				<player class_id_restriction="92" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2457" levels="1" name="Arrow Rain">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="772" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="772" />
+				</not>
+				<player class_id_restriction="102" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2458" levels="1" name="Ghost Piercing">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="773" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="773" />
+				</not>
+				<player class_id_restriction="109" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2459" levels="1" name="Dread Pool">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="774" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="774" />
+				</not>
+				<player class_id_restriction="89" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2460" levels="1" name="Weapon Blockade">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="775" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="775" />
+				</not>
+				<player class_id_restriction="88" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2461" levels="1" name="Force of Destruction">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="776" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="776" />
+				</not>
+				<player class_id_restriction="114" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2462" levels="1" name="Demolition Impact">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="777" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="777" />
+				</not>
+				<player class_id_restriction="113" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2463" levels="1" name="Golem Armor">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="778" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="778" />
+				</not>
+				<player class_id_restriction="118" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2464" levels="1" name="Flame Armor">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1492" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1492" />
+				</not>
+				<player class_id_restriction="94" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2465" levels="1" name="Frost Armor">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1493" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1493" />
+				</not>
+				<player class_id_restriction="103" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2466" levels="1" name="Hurricane Armor">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1494" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1494" />
+				</not>
+				<player class_id_restriction="110" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2467" levels="1" name="Vampiric Mist">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1495" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1495" />
+				</not>
+				<player class_id_restriction="95" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2468" levels="1" name="Servitor Barrier">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1496" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1496" />
+				</not>
+				<player class_id_restriction="96, 104, 111" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2469" levels="1" name="Excessive Loyalty">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1497" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1497" />
+				</not>
+				<player class_id_restriction="96, 104, 111" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2470" levels="1" name="Mutual Response">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1498" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1498" />
+				</not>
+				<player class_id_restriction="96, 104, 111" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2471" levels="1" name="Improve Combat">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1499" />
+		<set name="magicLvl" val="70" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1499" />
+				</not>
+				<player class_id_restriction="17, 98" />
+				<player level="70" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2472" levels="1" name="Improve Magic">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1500" />
+		<set name="magicLvl" val="70" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1500" />
+				</not>
+				<player class_id_restriction="43, 112" />
+				<player level="70" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2473" levels="1" name="Improve Condition">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1501" />
+		<set name="magicLvl" val="70" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1501" />
+				</not>
+				<player class_id_restriction="17, 98" />
+				<player level="70" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2474" levels="1" name="Improve Critical">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1502" />
+		<set name="magicLvl" val="70" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1502" />
+				</not>
+				<player class_id_restriction="43, 112" />
+				<player level="70" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2475" levels="1" name="Improve Shield Defense">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1503" />
+		<set name="magicLvl" val="70" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1503" />
+				</not>
+				<player class_id_restriction="30, 105" />
+				<player level="70" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2476" levels="1" name="Improve Movement">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1504" />
+		<set name="magicLvl" val="70" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1504" />
+				</not>
+				<player class_id_restriction="30, 105" />
+				<player level="70" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2477" levels="1" name="Sublime Self-sacrifice">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1505" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1505" />
+				</not>
+				<player class_id_restriction="97" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2478" levels="1" name="Blessing of Eva">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1506" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1506" />
+				</not>
+				<player class_id_restriction="105" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2479" levels="1" name="Lord of Vampire">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1507" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1507" />
+				</not>
+				<player class_id_restriction="112" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2480" levels="1" name="Throne Root">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1508" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1508" />
+				</not>
+				<player class_id_restriction="112" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2481" levels="1" name="Seal of Limit">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="1509" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="1509" />
+				</not>
+				<player class_id_restriction="115" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2482" levels="1" name="Spirit of Phoenix">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="784,785" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="784" />
+				</not>
+				<player class_id_restriction="90" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2483" levels="1" name="Eva's Will">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:0
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="786,787" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="786" />
+				</not>
+				<player class_id_restriction="99" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2484" levels="1" name="Pain of Shilen">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="788,789" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="788" />
+				</not>
+				<player class_id_restriction="106" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2485" levels="1" name="Herb of Life">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="power" val="15" />
+		<set name="hitTime" val="100" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="HEAL_PERCENT" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isPotion" val="true" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+	</skill>
+	<skill id="2486" levels="1" name="Herb of Mana">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="power" val="12" />
+		<set name="hitTime" val="100" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="MANAHEAL_PERCENT" />
+		<set name="reuseDelay" val="2000" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="isPotion" val="true" />
+		<cond msgId="113" addName="1">
+			<player flyMounted="False" />
+		</cond>
+	</skill>
+	<skill id="2487" levels="1" name="Item - Special Sound Crystal">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="isPotion" val="true" />
+		<set name="reuseDelay" val="30000"/>
+		<set name="staticReuse" val="true"/>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="2488" levels="1" name="Wild Shot">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="790" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="790" />
+				</not>
+				<player class_id_restriction="134" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2489" levels="1" name="Lightning Shock">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="LEARN_SKILL" />
+		<set name="learnSkillId" val="791" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="1500" />
+		<set name="staticHitTime" val="true" />
+		<cond msgId="113" addName="1">
+			<and>
+				<not>
+					<player active_skill_id="791" />
+				</not>
+				<player class_id_restriction="132, 133" />
+				<player level="81" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2490" levels="1" name="Magic Defense Toolkit for beginners">
+		<!--
+			Last Modify: 03.03.2011
+			Confirmed: CT2.5
+			Comments: 
+			Description: 
+		-->
+		<table name="#extractableItems">
+			10470,2,10471,2,10472,1,100
+		</table>
+		<set name="capsuled_items_skill" val="#extractableItems" />
+		<set name="itemConsumeCount" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="EXTRACTABLE" />
+ 		<set name="target" val="TARGET_SELF" />
+		<cond msgId="129">
+			<and>
+				<player invSize="10" />
+				<player weight="80" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2491" levels="1" name="Transform Zaken">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="transformId" val="305"/>
+		<for>
+			<effect name="Transformation" time="1800" val="0"/>
+		</for>
+	</skill>
+	<skill id="2492" levels="1" name="Transform Anakim">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="transformId" val="306"/>
+		<for>
+			<effect name="Transformation" time="1800" val="0"/>
+		</for>
+	</skill>
+	<skill id="2493" levels="1" name="Transform Venom">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="transformId" val="307"/>
+		<for>
+			<effect name="Transformation" time="1800" val="0"/>
+		</for>
+	</skill>
+	<skill id="2494" levels="1" name="Transform Gordon">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="transformId" val="308"/>
+		<for>
+			<effect name="Transformation" time="1800" val="0"/>
+		</for>
+	</skill>
+	<skill id="2495" levels="1" name="Transform Ranku">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="transformId" val="309"/>
+		<for>
+			<effect name="Transformation" time="1800" val="0"/>
+		</for>
+	</skill>
+	<skill id="2496" levels="1" name="Transform Kietch">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="target" val="TARGET_SELF"/>
+		<set name="skillType" val="BUFF"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="transformId" val="310"/>
+		<for>
+			<effect name="Transformation" time="1800" val="0"/>
+		</for>
+		
+	</skill>
+	<skill id="2497" levels="1" name="Transform Demon Prince">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="transformId" val="311" />
+		<for>
+			<effect name="Transformation" time="1800" val="0" />
+		</for>
+	</skill>
+	<skill id="2498" levels="1" name="Bottle of Empty Soul">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<set name="itemConsumeCount" val="1" />
+		<set name="hitTime" val="500" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="CREATE_ITEM" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="create_item_id" val="10410" />
+		<set name="create_item_count" val="1" />
+		<set name="soulConsumeCount" val="5" />
+		<set name="isPotion" val="true"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player flyMounted="False" />
+				<player races="Kamael" />
+				<player souls="5" />
+			</and>
+		</cond>
+	</skill>
+	<skill id="2499" levels="1" name="Bottle of Full Soul">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: 
+		-->
+		<table name="#souls"> 5 10 </table>
+		<set name="itemConsumeCount" val="1" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="CHARGESOUL" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="num_souls" val="#souls"/>
+		<set name="isPotion" val="true"/>
+		<cond msgId="113" addName="1">
+			<and>
+				<player flyMounted="False" />
+				<player races="Kamael" />
+			</and>
+		</cond>
+	</skill>
+</list>

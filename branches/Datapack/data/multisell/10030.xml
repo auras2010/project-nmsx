@@ -1,0 +1,43 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+
+<!-- Exchange -->
+<!-- © 2010 by mathuza -->
+
+<list maintainEnchantment="true" xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
+<!-- 1 -->
+	<item id="1">
+		<ingredient id="5963" count="5"/>
+		<ingredient id="5961" count="5"/>
+		<production id="5962" count="1"/>
+	</item>
+	<!-- 2-->
+	<item id="2">
+		<ingredient id="5961" count="1"/>
+		<production id="5963" count="1"/>
+	</item>
+	<!-- 3 -->
+	<item id="3">
+		<ingredient id="5963" count="1"/>
+		<production id="5961" count="1"/>
+	</item>
+	<!-- GB -->
+	<item id="4">
+		<ingredient id="57" count="500000000"/>
+		<production id="3470" count="1"/>
+	</item>
+	<!-- Adena -->
+	<item id="5">
+		<ingredient id="3470" count="1"/>
+		<production id="57" count="500000000"/>
+	</item>
+	<!-- Mouse Coin -->
+	<item id="6">
+		<ingredient id="14721" count="1"/>
+		<production id="5962" count="10"/>
+	</item>
+		<!-- Mouse Coin -->
+	<item id="7">
+		<ingredient id="5962" count="10"/>
+		<production id="14721" count="1"/>
+	</item>
+</list>

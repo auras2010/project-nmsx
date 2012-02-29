@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<instance name="Kamaloka_78" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="instance.xsd" >
+  <activityTime val="45" />
+  <emptyDestroyTime val="5" />
+  <spawnPoint spawnX="42673" spawnY="-47988" spawnZ="-797" />
+  <spawnlist>    
+    <!-- Escape Device -->
+    <spawn npcId="32496" x="-10859" y="-185526" z="-10944" heading="0" respawn="0" />
+    <!-- Main Mob from 1st Floor -->
+    <spawn npcId="22500" x="-12207" y="-185402" z="-10950" heading="0" respawn="0" />
+    <!-- Minion Mobs from 1st Floor -->
+    <spawn npcId="22501" x="-12259" y="-185476" z="-10948" heading="0" respawn="0" />
+    <spawn npcId="22501" x="-12161" y="-185480" z="-10948" heading="0" respawn="0" />
+    <spawn npcId="22501" x="-12336" y="-185526" z="-10948" heading="0" respawn="0" />
+    <spawn npcId="22501" x="-12211" y="-185523" z="-10948" heading="0" respawn="0" />
+    <spawn npcId="22501" x="-12086" y="-185524" z="-10948" heading="0" respawn="0" />
+    <spawn npcId="22501" x="-12260" y="-185578" z="-10948" heading="0" respawn="0" />
+    <spawn npcId="22501" x="-12164" y="-185575" z="-10948" heading="0" respawn="0" />
+    <spawn npcId="22501" x="-12212" y="-185646" z="-10948" heading="0" respawn="0" />
+    <!-- Mobs from 2nd Floor -->
+    <spawn npcId="22502" x="-14546" y="-185405" z="-10685" heading="0" respawn="0" />
+    <spawn npcId="22502" x="-14666" y="-185525" z="-10685" heading="0" respawn="0" />
+    <spawn npcId="22502" x="-14544" y="-185525" z="-10685" heading="0" respawn="0" />
+    <spawn npcId="22502" x="-14418" y="-185528" z="-10685" heading="0" respawn="0" />
+    <spawn npcId="22502" x="-14542" y="-185653" z="-10685" heading="0" respawn="0" />
+    <!-- 1st Raid from 3rd Floor -->
+    <spawn npcId="25621" x="-16871" y="-185524" z="-10423" heading="0" respawn="0" />
+    <!-- 2nd Raid from 4rd Floor -->
+    <spawn npcId="29144" x="-20657" y="-185529" z="-9978" heading="0" respawn="0" />
+    <!-- Minions of 2nd Raid from 4rd Floor -->
+    <spawn npcId="29145" x="-20665" y="-185732" z="-9995" heading="0" respawn="0" />
+    <spawn npcId="29145" x="-20773" y="-185781" z="-9995" heading="0" respawn="0" />
+    <spawn npcId="29146" x="-20886" y="-185528" z="-9995" heading="0" respawn="0" />
+    <spawn npcId="29146" x="-20653" y="-185348" z="-9995" heading="0" respawn="0" />            
+  </spawnlist>
+</instance>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Quest 632: Necromancer's Request -->
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
+	<item id="1">
+		<!-- Zombie's Brain -->
+		<ingredient count="27" id="7543" />
+		<!-- Mold Lubricant (27 Brains) -->
+		<production count="1" id="4040" />
+	</item>
+	<item id="2">
+		<!-- Zombie's Brain -->
+		<ingredient count="32" id="7543" />
+		<!-- Enria (32 Brains) -->
+		<production count="1" id="4042" />
+	</item>
+	<item id="3">
+		<!-- Zombie's Brain -->
+		<ingredient count="62" id="7543" />
+		<!-- Mold Hardener (62 Brains) -->
+		<production count="1" id="4041" />
+	</item>
+	<item id="4">
+		<!-- Zombie's Brain -->
+		<ingredient count="13" id="7543" />
+		<!-- Adamanite Nugget (13 Brains) -->
+		<production count="1" id="1877" />
+	</item>
+</list>

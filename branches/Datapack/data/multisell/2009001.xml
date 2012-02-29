@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Bloodshed Instance Event - Purchase Special Products -->
+<list xmlns:ns0="http://www.w3.org/2001/XMLSchema-instance" ns0:noNamespaceSchemaLocation="multisell.xsd">
+  <!-- Refined Carnival Circlet -->
+  <item id="1">
+    <ingredient id="14720" count="10"/>
+    <production id="13493" count="1"/>
+  </item>
+  <!-- Event - Refined Carnival Circlet -->
+  <item id="2">
+    <ingredient id="14720" count="10"/>
+    <production id="13502" count="1"/>
+  </item>
+  <!-- Search Hat -->
+  <item id="3">
+    <ingredient id="14720" count="10"/>
+    <production id="13515" count="1"/>
+  </item>
+  <!-- Improved Search Hat -->
+  <item id="4">
+    <ingredient id="14720" count="10"/>
+    <production id="13516" count="1"/>
+  </item>
+  <!-- Mining Hat -->
+  <item id="5">
+    <ingredient id="14720" count="10"/>
+    <production id="13513" count="1"/>
+  </item>
+  <!-- Improved Mining Hat -->
+  <item id="6">
+    <ingredient id="14720" count="10"/>
+    <production id="13514" count="1"/>
+  </item>
+  <!-- Refined Angel Ring -->
+  <item id="7">
+    <ingredient id="14720" count="10"/>
+    <production id="13494" count="1"/>
+  </item>
+  <!-- Refined Devil Horn -->
+  <item id="8">
+    <ingredient id="14720" count="10"/>
+    <production id="13495" count="1"/>
+  </item>
+  <!-- Event - Dragonfly Goggle -->
+  <item id="9">
+    <ingredient id="14720" count="10"/>
+    <production id="13522" count="1"/>
+  </item>
+  <!-- Refined Jester Hat -->
+  <item id="10">
+    <ingredient id="14720" count="10"/>
+    <production id="13499" count="1"/>
+  </item>
+</list>

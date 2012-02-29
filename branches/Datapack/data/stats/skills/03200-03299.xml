@@ -1,0 +1,1908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list>
+	<skill id="3200" levels="3" name="Item Skill: Spell Refresh">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Active: Temporarily decreases the re-use time for magic skills.
+		-->
+		<table name="#mpInitialConsume"> 11 13 14 </table>
+		<table name="#mpConsume"> 43 49 55 </table>
+		<table name="#magicLvl"> 55 64 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="600000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="abnormal_item">
+				<mul order="0x30" stat="mReuse" val="0.85" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3201" levels="3" name="Item Skill: Music Refresh">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Active: Temporarily decreases the re-use time for song/dance skills.
+		-->
+		<table name="#mpInitialConsume"> 11 13 14 </table>
+		<table name="#mpConsume"> 43 49 55 </table>
+		<table name="#magicLvl"> 55 64 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="600000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="abnormal_item">
+				<mul order="0x30" stat="pReuse" val="0.85" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3202" levels="3" name="Item Skill: Refresh">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Active: Temporarily decreases the re-use times for all skills.
+		-->
+		<table name="#mpInitialConsume"> 11 13 14 </table>
+		<table name="#mpConsume"> 43 49 55 </table>
+		<table name="#magicLvl"> 55 64 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="600000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="60" val="0" stackOrder="1" stackType="abnormal_item">
+				<mul order="0x30" stat="mReuse" val="0.85" />
+				<mul order="0x30" stat="pReuse" val="0.85" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3203" levels="1" name="Item Skill: Mystery Skill">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Active: Increases your head size.
+		-->
+		<set name="mpConsume" val="10" />
+		<set name="magicLvl" val="1" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="staticReuse" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="BigHead" time="300" val="0" abnormal="bighead" stackOrder="120" stackType="big_head" />
+		</for>
+	</skill>
+	<skill id="3204" levels="3" name="Item Skill: Reflect Damage">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. Excludes damage from skill or remote attacks.
+		-->
+		<table name="#mpInitialConsume"> 5 6 7 </table>
+		<table name="#mpConsume"> 20 24 28 </table>
+		<table name="#reflectDam"> 10 15 20 </table>
+		<table name="#magicLvl"> 55 64 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="6000" />
+		<set name="hitTime" val="4000" />
+		<set name="skillType" val="BUFF" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="abnormal_item">
+				<add order="0x40" stat="reflectDam" val="#reflectDam" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3205" levels="2" name="Item Skill: Party Recall">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Active: Teleports party members to a village. Cannot be used in a specially designated place such as the GM Consultation Service.
+		-->
+		<table name="#mpInitialConsume"> 43 61 </table>
+		<table name="#mpConsume"> 171 244 </table>
+		<table name="#hitTime"> 20000 3500 </table>
+		<table name="#magicLvl"> 48 56 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="mpInitialConsume" val="#mpInitialConsume" />
+		<set name="mpConsume" val="#mpConsume" />
+		<set name="target" val="TARGET_PARTY" />
+		<set name="skillRadius" val="1000" />
+		<set name="reuseDelay" val="3600000" />
+		<set name="hitTime" val="#hitTime" />
+		<set name="skillType" val="RECALL" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="3206" levels="10" name="Item Skill: Music">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Active: Plays music.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="reuseDelay" val="12000" />
+		<set name="staticReuse" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="3207" levels="10" name="Item Skill: Heal">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Restores your HP by using attack rate.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5146" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3208" levels="10" name="Item Skill: Blessed Body">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Increases Max. HP by using attack rate for a certain amount of time.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5147" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3209" levels="10" name="Item Skill: Prayer">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Increases the effect of HP recovery magic by using attack rate for a certain amount of time.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5148" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3210" levels="10" name="Item Skill: Recharge">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Restores your MP by using attack rate.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5149" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3211" levels="10" name="Item Skill: Blessed Soul">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Increases maximum MP when under attack for a certain amount of time.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5150" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3212" levels="10" name="Item Skill: Mana Gain">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Increases the recharge recovery rate of MP when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5151" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3213" levels="10" name="Item Skill: Ritual">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Restores CP when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5152" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3214" levels="10" name="Item Skill: Cheer">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Increases Max. CP when under attack for a certain amount of time.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5153" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3215" levels="10" name="Item Skill: Might">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Temporarily increases P. Atk. when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5154" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3216" levels="10" name="Item Skill: Empower">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Temporarily increases PVP M. Atk. when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+        <set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5156" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3217" levels="10" name="Item Skill: Duel Might">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Temporarily increases PVP P. Atk. when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="triggeredId" val="5157" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3218" levels="10" name="Item Skill: Shield">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Temporarily increases P. Def. when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5158" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3219" levels="10" name="Item Skill: Magic Barrier">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Temporarily increases M. Def. when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+        <set name="target" val="TARGET_SELF" /> 
+		<set name="triggeredId" val="5159" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3220" levels="10" name="Item Skill: Duel Weakness">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Temporarily decreases the opponent's PVP P. Atk. when you are under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+    	<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5160" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3221" levels="10" name="Item Skill: Agility">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Temporarily increases Evasion when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5161" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3222" levels="10" name="Item Skill: Guidance">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Temporarily increases Accuracy when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5162" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3223" levels="10" name="Item Skill: Focus">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Temporarily increases the critical attack rate when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5163" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3224" levels="10" name="Item Skill: Wild Magic">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Temporarilty increases the critical attack rate of magic attacks when under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5164" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3225" levels="10" name="Item Skill: Charm">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Decreases the enemy's urge to attack when you are under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="1" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5165" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3226" levels="10" name="Item Skill: Slow">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Momentarily decreases a target's Speed when you are under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="2" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5166" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3227" levels="10" name="Item Skill: Winter">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Momentarily decreases a target's Atk. Spd. when you are under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5167" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3228" levels="10" name="Item Skill: Stun">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Momentarily stuns the target when you are under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5168" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3229" levels="10" name="Item Skill: Hold">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Active: Momentarily holds the target when you are under attack. Additional chance to be put into hold greatly decreases while the effect lasts.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5169" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3230" levels="10" name="Item Skill: Sleep">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Active: Momentarily causes the target to sleep when you are under attack. Additional chance to be put into sleep greatly decreases while the effect lasts.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5170" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3231" levels="10" name="Item Skill: Paralyze">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Momentarily paralyzes the target when you are under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5171" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3232" levels="10" name="Item Skill: Medusa">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Momentarily petrifies the target when you are under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5172" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3233" levels="10" name="Item Skill: Fear">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Momentarily instills a feeling of fear on the target that causes it to flee when you are under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5173" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3234" levels="10" name="Item Skill: Poison">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Momentarily poisons the target when you are under attack. Effect 8.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5174" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3235" levels="10" name="Item Skill: Bleed">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Momentarily causes the target to bleed when you are under attack. Effect 8.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5175" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3236" levels="10" name="Item Skill: Silence">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Momentarily blocks the target's magic skills when you are under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5176" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3237" levels="10" name="Item Skill: Doom">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Chance: Momentarily blocks all of the target's physical and magic skills when you are under attack.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#triggeredLevel"> 1 2 3 4 5 6 7 8 9 10 </table>
+		<set name="activationChance" val="4" />
+		<set name="chanceType" val="ON_ATTACKED_HIT" />
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="triggeredId" val="5177" />
+		<set name="triggeredLevel" val="#triggeredLevel" />
+	</skill>
+	<skill id="3238" levels="10" name="Item Skill: Prayer">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases the effect of HP recovery magic when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="gainHp" val="1.01" />
+		</for>
+	</skill>
+	<skill id="3239" levels="10" name="Item Skill: Mana Gain">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases the recharge recovery rate of MP when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="gainMp" val="1.01" />
+		</for>
+	</skill>
+	<skill id="3240" levels="10" name="Item Skill: Might">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases P. Atk. when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#pAtk"> 10.26 11.22 11.94 12.94 13.55 14.44 14.85 15.92 16.68 17.84 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="pAtk" val="#pAtk" />
+		</for>
+	</skill>
+	<skill id="3241" levels="10" name="Item Skill: Empower">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases M. Atk. when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="mAtk" val="55" />
+		</for>
+	</skill>
+	<skill id="3243" levels="10" name="Item Skill: Duel Might">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases PVP P. Atk. when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="pvpPhysDmg" val="1.05" />
+			<mul order="0x30" stat="pvpPhysSkillsDmg" val="1.05" />
+		</for>
+	</skill>
+	<skill id="3244" levels="10" name="Item Skill: Shield">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases P. Def. when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#pDef"> 12.78 13.73 14.14 15.13 16.46 17.43 17.69 18.63 19.77 20.3 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="pDef" val="#pDef" />
+		</for>
+	</skill>
+	<skill id="3245" levels="10" name="Item Skill: Magic Barrier">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases M. Def. when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#mDef"> 10.8 11.62 11.96 12.66 13.01 13.08 14 14.99 15.88 16.32 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="mDef" val="#mDef" />
+		</for>
+	</skill>
+	<skill id="3246" levels="10" name="Item Skill: Heal Empower">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases the power of HP recovery magic when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<table name="#giveHp"> 10 11 12 13 14 16 17 18 19 20 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="giveHp" val="#giveHp" />
+		</for>
+	</skill>
+	<skill id="3247" levels="10" name="Item Skill: Agility">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases evasion when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="rEvas" val="2" />
+		</for>
+	</skill>
+	<skill id="3248" levels="10" name="Item Skill: Guidance">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases accuracy when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="accCombat" val="2" />
+		</for>
+	</skill>
+	<skill id="3249" levels="10" name="Item Skill: Focus">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases critical attack rate when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<basemul order="0x30" stat="rCrit" val="0.2" />
+		</for>
+	</skill>
+	<skill id="3250" levels="10" name="Item Skill: Wild Magic">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases the critical attack rate of magic attacks when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<basemul order="0x30" stat="mCritRate" val="0.04" />
+		</for>
+	</skill>
+	<skill id="3251" levels="10" name="Item Skill: Weight Limit">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases the weapon weight limit by 2 times when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="maxLoad" val="2" />
+		</for>
+	</skill>
+	<skill id="3252" levels="10" name="Item Skill: Kiss of Eva">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases lung capacity when equipped.
+		-->
+		<table name="#magicLvl"> 46 49 52 55 58 61 64 67 70 75 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<mul order="0x30" stat="breath" val="6" />
+		</for>
+	</skill>
+	<skill id="3253" levels="10" name="Item Skill: Acrobatics">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Passive: Increases the height from which you can jump without sustaining damage when equipped.
+		-->
+		<table name="#fallVuln"> 0.97 0.94 0.91 0.88 0.85 0.82 0.79 0.76 0.73 0.7 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="-1" />
+		<for>
+			<mul order="0x30" stat="fallVuln" val="#fallVuln"/>
+		</for>
+	</skill>
+	<skill id="3254" levels="10" name="Item Skill: Iron Body">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Passive: Raises resistance to damage from falling when equipped.
+		-->
+		<table name="#fallVuln"> 0.96 0.92 0.88 0.84 0.8 0.76 0.72 0.68 0.64 0.6 </table>
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="castRange" val="-1" />
+		<for>
+			<mul order="0x30" stat="fallVuln" val="#fallVuln"/>
+		</for>
+	</skill>
+	<skill id="3255" levels="3" name="Item Skill: Skill Clarity">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Decreases the MP consumption rate for physical skills when equipped.
+		-->
+		<table name="#magicLvl"> 55 64 75 </table>
+		<table name="#PhysicalMpConsumeRate"> 0.96 0.93 0.9 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+		</for>
+	</skill>
+	<skill id="3256" levels="3" name="Item Skill: Spell Clarity">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Decreases the MP consumption rate for magic skills when equipped.
+		-->
+		<table name="#magicLvl"> 55 64 75 </table>
+		<table name="#MagicalMpConsumeRate"> 0.9 0.85 0.8 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+		</for>
+	</skill>
+	<skill id="3257" levels="3" name="Item Skill: Music Clarity">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Decreases the MP consumption rate for song/dance skills when equipped.
+		-->
+		<table name="#magicLvl"> 55 64 75 </table>
+		<table name="#DanceMpConsumeRate"> 0.96 0.93 0.9 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="DanceMpConsumeRate" val="#DanceMpConsumeRate" />
+		</for>
+	</skill>
+	<skill id="3258" levels="3" name="Item Skill: Clarity">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Decreases the MP consumption rate for all skills when equipped.
+		-->
+		<table name="#magicLvl"> 55 64 75 </table>
+		<table name="#PhysicalMpConsumeRate"> 0.9 0.85 0.8 </table>
+		<table name="#MagicalMpConsumeRate"> 0.96 0.93 0.9 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<mul order="0x30" stat="MagicalMpConsumeRate" val="#MagicalMpConsumeRate" />
+			<mul order="0x30" stat="PhysicalMpConsumeRate" val="#PhysicalMpConsumeRate" />
+			<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+		</for>
+	</skill>
+	<skill id="3259" levels="3" name="Item Skill: Reflect Damage">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Passive: Increases the ability to reflect some of the damage you incur back to the enemy when equipped. Excludes damage by skill or long-range attacks.
+		-->
+		<table name="#magicLvl"> 55 64 75 </table>
+		<table name="#reflectDam"> 10 15 20 </table>
+		<set name="magicLvl" val="#magicLvl" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="BUFF" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<for>
+			<add order="0x40" stat="reflectDam" val="#reflectDam" />
+		</for>
+	</skill>
+	<skill id="3260" levels="1" name="Forgiveness">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Sends mutated animals a Heart with love.
+		-->
+		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
+		<set name="castRange" val="750"/>
+		<set name="hitTime" val="2500"/>
+		<set name="mpConsume" val="1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="472"/>
+		<set name="reuseDelay" val="12000"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="target" val="TARGET_COUPLE"/>
+		<for>
+			<effect count="15" name="HealOverTime" val="35" stackOrder="35" stackType="LifeForce"/>
+		</for>
+	</skill>
+	<skill id="3261" levels="1" name="Forgiveness">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Taps into the magic of the bow to fire a harmless bolt.  Warning: If you use this skill against a monster, it will flag you for PvP.
+		-->
+		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
+		<set name="hitTime" val="2500"/>
+		<set name="mpConsume" val="1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="180"/>
+		<set name="castRange" val="750"/>
+		<set name="reuseDelay" val="12000"/>
+		<set name="skillType" val="MANARECHARGE"/>
+		<set name="target" val="TARGET_COUPLE"/>
+	</skill>
+	<skill id="3262" levels="1" name="Pardon">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Continuously sends two hearts filled with love to mutated animals.
+		-->
+		<set name="weaponsAllowed" val="Bow" /> <!-- Bow -->
+		<set name="castRange" val="750"/>
+		<set name="hitTime" val="3200"/>
+		<set name="mpConsume" val="1"/>
+		<set name="operateType" val="OP_ACTIVE"/>
+		<set name="power" val="944"/>
+		<set name="reuseDelay" val="12000"/>
+		<set name="skillType" val="HEAL"/>
+		<set name="target" val="TARGET_COUPLE"/>
+		<for>
+			<effect count="15" name="HealOverTime" val="70" stackOrder="70" stackType="LifeForce">
+				<div order="0x30" stat="pDef" val="1.3"/>
+				<div order="0x30" stat="mDef" val="1.35"/>
+			</effect>
+		</for>
+	</skill>
+	<skill id="3263" levels="1" name="Blessed Resurrection">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Allows the use of Blessed Resurrection.
+		-->
+		<set name="magicLvl" val="76" />
+		<set name="mpInitialConsume" val="17" />
+		<set name="mpConsume" val="65" />
+		<set name="power" val="100" />
+		<set name="target" val="TARGET_CORPSE_PLAYER" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="hitTime" val="3000" />
+		<set name="skillType" val="RESURRECT" />
+		<set name="equipDelay" val="30000" />
+		<set name="staticReuse" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="castRange" val="400" />
+		<set name="effectRange" val="900" />
+	</skill>
+	<skill id="3264" levels="1" name="Blessed Escape">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Allows the use of Blessed Escape.
+		-->
+		<set name="mpInitialConsume" val="31" />
+		<set name="mpConsume" val="122" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="skillType" val="RECALL" />
+		<set name="equipDelay" val="30000" />
+		<set name="staticReuse" val="true" />
+		<set name="isMagic" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="hitTime" val="200" />
+	</skill>
+	<skill id="3265" levels="1" name="Mysterious Ability">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Increases the size of your head.
+		-->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="reuseDelay" val="1800000" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="BigHead" time="300" val="0" abnormal="bighead" stackOrder="0" stackType="big_head" />
+		</for>
+	</skill>
+	<skill id="3266" levels="1" name="Large Fireworks Ability">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Allows the use of Large Fireworks.
+		-->
+		<set name="mpInitialConsume" val="5" />
+		<set name="mpConsume" val="19" />
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="DUMMY" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="500" />
+		<set name="reuseDelay" val="300000" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+	</skill>
+	<skill id="3267" levels="1" name="Dismiss Agathion">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Dismiss a summoned Agathion.
+		-->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="AGATHION" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="npcId" val="0" />
+	</skill>
+	<skill id="3268" levels="1" name="Summon Agathion - Castle">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Summon an Agathion.
+		-->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="AGATHION" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="npcId" val="16028" />
+	</skill>
+	<skill id="3269" levels="1" name="Summon Agathion - Rainbow Clan Hall">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Summon an Agathion.
+		-->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="AGATHION" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="npcId" val="16027" />
+	</skill>
+	<skill id="3270" levels="1" name="Summon Agathion - Beast Farm">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Summon an Agathion.
+		-->
+		<set name="target" val="TARGET_SELF" />
+		<set name="skillType" val="AGATHION" />
+		<set name="hitTime" val="3000" />
+		<set name="staticHitTime" val="true" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="npcId" val="16026" />
+	</skill>
+	<skill id="3271" levels="1" name="Blue Talisman of Power">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT 2.5
+			Comments:  P. Atk. +60
+			Description: Increase P. Atk with power of Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9914" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman">
+				<add order="0x40" stat="pAtk" val="63" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3272" levels="1" name="Blue Talisman of Defense">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: CT 2.5 Confirmed, P. Def. +70
+			Description: Increase P. Def with power of Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9926" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+        <set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman">
+				<add order="0x40" stat="pDef" val="72" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3273" levels="1" name="Red Talisman of Recovery">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Recover HP/CP with power of Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="1200" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="power" val="200" />
+		<set name="referenceId" val="9925" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="HEAL_STATIC" />
+		<set name="staticReuse" val="true" />
+		<set name="staticHitTime" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="CombatPointHealOverTime" noicon="1" val="200" />
+		</for>
+	</skill>
+	<skill id="3274" levels="1" name="Blue Talisman of Protection">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: Guessing, based on 603
+			Description: Increase Shield P. Def with power of Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9921" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman">
+				<add order="0x40" stat="sDef" val="220" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3275" levels="1" name="Blue Talisman of Protection">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: Guessing, based on 602
+			Description: Increase Shield P. Def rate with power of Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9929" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+       <set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman">
+				<mul order="0x30" stat="rShld" val="1.3" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3276" levels="1" name="Blue Talisman - Magic Resistance">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: CT 2.5 Confirmed, M. Def. +100
+			Description: Increase M. Def. with power of Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9927" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+        <set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman">
+				<add order="0x40" stat="mDef" val="100" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3277" levels="1" name="Blue Talisman of Wild Magic">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: Guessing, based on 3142-1
+			Description: Increases the critical attack rate of magic attacks with power of Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9915" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman">
+				<add order="0x40" stat="mCritRate" val="2" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3278" levels="1" name="Red Talisman of Mental Regeneration">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Increase MP regeneration rate with power of Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9928" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+        <set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman">
+				<mul order="0x30" stat="regMp" val="1.1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3279" levels="1" name="Red Talisman of Meditation">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Greatly increase MP regeneration rate with power of Talisman. Immobilized while being healed.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9931" />
+		<set name="removedOnDamage" val="true" />
+		<set name="reuseDelay" val="900000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect count="6" name="ManaHealOverTime" time="5" noicon="1" val="27" stackOrder="1" stackType="talisman" />
+			<effect name="Paralyze" time="30" val="0">
+				<mul order="0x30" stat="pDef" val="0.1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3280" levels="1" name="Blue Talisman of Invisibility">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Uses power of Talisman to disable preemptive attacks from enemies.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9920" />
+		<set name="reuseDelay" val="240000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="SilentMove" time="120" abnormal="stealth" val="0" stackOrder="1" stackType="talisman">
+				<mul order="0x30" stat="runSpd" val="0.6" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3281" levels="1" name="Red Talisman of Minimum Clarity">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments:
+			Description: MP consumption for skill decreases with the power of the Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9917" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="300" val="0" stackOrder="1" stackType="talisman">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0.96" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0.9" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0.9" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3282" levels="1" name="Red Talisman of Maximum Clarity">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: MP consumption for skill decreases with the power of the Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="reuseDelay" val="900000" />
+		<set name="referenceId" val="9918" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+        <set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="90" val="0" stackOrder="1" stackType="talisman">
+				<mul order="0x30" stat="MagicalMpConsumeRate" val="0" />
+				<mul order="0x30" stat="PhysicalMpConsumeRate" val="0" />
+				<mul order="0x30" stat="DanceMpConsumeRate" val="0" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3283" levels="1" name="Blue Talisman of Healing">
+		<!-- Confirmed CT2.5 -->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9924" />
+		<set name="reuseDelay" val="300000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+        <set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman">
+				<add order="0x40" stat="giveHp" val="100" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3284" levels="1" name="Blue Talisman - Divine Protection">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Significantly increases P. Def. and M. Def.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="1200" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9932" />
+		<set name="reuseDelay" val="900000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+        <set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="10" val="0" stackOrder="1" stackType="talisman">
+				<add order="0x40" stat="pDef" val="3600" />
+				<add order="0x40" stat="mDef" val="2700" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3285" levels="1" name="Blue Talisman of Defense">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: 
+			Description: Temporarily decrease defense ability/magic resistance/dodge and increases attack power/magic power/attack speed/magic speed/speed with power of Talisman.
+		-->
+		<set name="aggroPoints" val="532" />
+		<set name="equipDelay" val="30000" />
+		<set name="hitTime" val="4000" />
+		<set name="magicLvl" val="55" />
+		<set name="mpConsume" val="40" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="referenceId" val="9916" />
+		<set name="reuseDelay" val="360000" />
+		<set name="skillType" val="BUFF" />
+		<set name="staticHitTime" val="true" />
+		<set name="staticReuse" val="true" />
+        <set name="target" val="TARGET_SELF" />
+		<for>
+			<effect name="Buff" time="120" val="0" stackOrder="1" stackType="talisman">
+				<add order="0x40" stat="pAtk" val="8.7" />
+				<add order="0x40" stat="pAtkSpd" val="4" />
+				<add order="0x40" stat="mAtk" val="10.1" />
+				<add order="0x40" stat="mAtkSpd" val="3" />
+				<add order="0x40" stat="runSpd" val="3" />
+				<sub order="0x40" stat="pDef" val="13.6" />
+				<sub order="0x40" stat="mDef" val="11" />
+				<sub order="0x40" stat="rEvas" val="1" />
+			</effect>
+		</for>
+	</skill>
+	<skill id="3286" levels="1" name="Black Talisman - Mending">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Cure bleeding with power of Talisman.
+		-->
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="mpConsume" val="40" />
+		<set name="skillType" val="NEGATE" />
+		<set name="negateStats" val="BLEED" />
+		<set name="negateLvl" val="9" />
+		<set name="hitTime" val="1200" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="referenceId" val="9922" />
+	</skill>
+	<skill id="3287" levels="1" name="Black Talisman of Physical Freedom">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Cancel Physical Movement Inability State with power of Talisman.
+		-->
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="mpConsume" val="40" />
+		<set name="skillType" val="NEGATE" />
+		<set name="negateStats" val="SHACKLE" /> <!-- Should be Physical Root only -->
+		<set name="negateLvl" val="9" />
+		<set name="hitTime" val="1200" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="referenceId" val="9957" />
+	</skill>
+	<skill id="3288" levels="1" name="Black Talisman of Arcane Freedom">
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="mpConsume" val="40" />
+		<set name="skillType" val="NEGATE" />
+		<set name="negateStats" val="ROOT" /> <!-- Should be Magical Root only -->
+		<set name="negateLvl" val="9" />
+		<set name="hitTime" val="1200" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="referenceId" val="9956" />
+	</skill>
+	<skill id="3289" levels="1" name="Black Talisman - Escape">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Cancel All Movement Inability State with power of Talisman.
+		-->
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="mpConsume" val="40" />
+		<set name="skillType" val="NEGATE" />
+		<set name="negateStats" val="ROOT" /> <!-- Should be Physical & Magical Root -->
+		<set name="negateLvl" val="3" />
+		<set name="hitTime" val="1200" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="referenceId" val="9923" />
+	</skill>
+	<skill id="3290" levels="1" name="Black Talisman of Rescue">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:
+			Comments: 
+			Description: Cancel Physical Skill Inability State with power of Talisman.
+		-->
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="mpConsume" val="40" />
+		<set name="skillType" val="NEGATE" />
+		<set name="negateStats" val="MUTE" /> <!-- Should be Physical mute only -->
+		<set name="negateLvl" val="9" />
+		<set name="hitTime" val="1200" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="referenceId" val="9958" />
+	</skill>
+	<skill id="3291" levels="1" name="Black Talisman of Vocalization">
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="mpConsume" val="40" />
+		<set name="skillType" val="NEGATE" />
+		<set name="negateStats" val="MUTE" /> <!-- Should be Magical mute only -->
+		<set name="negateLvl" val="9" />
+		<set name="hitTime" val="1200" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="referenceId" val="9955" />
+	</skill>
+	<skill id="3292" levels="1" name="Black Talisman of Free Speech">
+		<set name="target" val="TARGET_SELF" />
+		<set name="operateType" val="OP_ACTIVE" />
+		<set name="magicLvl" val="55" />
+		<set name="isMagic" val="true" />
+		<set name="mpInitialConsume" val="10" />
+		<set name="mpConsume" val="40" />
+		<set name="skillType" val="NEGATE" />
+		<set name="negateStats" val="MUTE" /> <!-- Should be Physical & Magical mute -->
+		<set name="negateLvl" val="9" />
+		<set name="hitTime" val="1200" />
+		<set name="staticHitTime" val="true" />
+		<set name="reuseDelay" val="360000" />
+		<set name="staticReuse" val="true" />
+		<set name="equipDelay" val="30000" />
+		<set name="referenceId" val="9959" />
+	</skill>
+	<skill id="3293" levels="1" name="Yellow Talisman of Power">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:CT 2.5
+			Comments:   P. Atk. +20
+			Description: Increase P. Atk when equipped with Talisman.
+		-->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="pAtk" val="20.8" />
+		</for>
+	</skill>
+	<skill id="3294" levels="1" name="Yellow Talisman of Arcane Power">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:CT 2.5
+			Comments: 
+			Description: Increase M. Atk when equipped with Talisman.
+		-->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="mAtk" val="24.3" />
+		</for>
+	</skill>
+	<skill id="3295" levels="1" name="Yellow Talisman of Defense">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:CT 2.5
+			Comments: 
+			Description: Increase P. Def when equipped with Talisman.
+		-->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="pDef" val="32.8" />
+		</for>
+	</skill>
+	<skill id="3296" levels="1" name="Yellow Talisman - Magic Resistance">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:CT 2.5
+			Comments: 
+			Description: Increase M. Def. when equipped with Talisman.
+		-->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="mDef" val="26.4" />
+		</for>
+	</skill>
+	<skill id="3297" levels="1" name="Yellow Talisman of Accuracy">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:CT 2.5
+			Comments:
+			Description: Increase Accuracy when equipped with Talisman.
+		-->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="accCombat" val="2" />
+		</for>
+	</skill>
+	<skill id="3298" levels="1" name="Yellow Talisman of Evasion">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed:CT 2.5
+			Comments: 
+			Description: Increase Evasion when equipped with Talisman.
+		-->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="rEvas" val="2" />
+		</for>
+	</skill>
+	<skill id="3299" levels="1" name="Yellow Talisman of Critical Power">
+		<!--
+			Last Modify: 17.12.2010
+			Confirmed: CT2.5
+			Comments: Guessing : Critical Damage +50
+			Description: Increase critical attack power when equipped with Talisman.
+		-->
+		<set name="magicLvl" val="55" />
+		<set name="operateType" val="OP_PASSIVE" />
+		<set name="skillType" val="BUFF" />
+		<set name="target" val="TARGET_SELF" />
+		<for>
+			<add order="0x40" stat="cAtkAdd" val="30" />
+		</for>
+	</skill>
+</list>
